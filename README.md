@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# Steal My Art Back
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Are you an artist tired of your work being used without your consent? Worrying about AI models copying your style or plagiarizing your creations? Fear no more! Steal My Art Back is here to empower you.
 
-## Available Scripts
+What is Steal My Art Back?
 
-In the project directory, you can run:
+Steal My Art Back is a revolutionary new product designed to shield artists from the potential pitfalls of the AI era. We provide tools and resources to help you:
 
-### `npm start`
+* Control your data: Our innovative techniques like data masking and metadata tagging protect your work from unauthorized training by AI models.
+* Make informed decisions: We offer clear and concise information about AI training data practices and your rights as an artist.
+* Navigate the legal landscape: We can connect you with legal experts who specialize in artists' rights and intellectual property in the digital age.
+* Join a community: Connect with other artists facing similar challenges and share knowledge, advice, and support.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Steal My Art Back empowers you to:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Safeguard your unique style and creative expressions.
+* Monetize your work on your terms.
+* Contribute to a fairer and more ethical AI ecosystem.
 
-### `npm test`
+Who is Steal My Art Back for?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Whether you're a seasoned professional or a budding artist, Steal My Art Back is here to support you. Our user-friendly tools and customizable features cater to artists of all skill levels and across various mediums.
 
-### `npm run build`
+Get started today!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Visit our website to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Learn more about how Steal My Art Back works.
+* Explore our subscription plans and choose the one that fits your needs.
+* Access educational resources and legal guidance.
+* Join our vibrant community of artists.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With Steal My Art Back, you can reclaim control of your art and shape the future of AI creation. Take a stand for your intellectual property and join the movement for ethical AI development.
 
-### `npm run eject`
+Let's create a world where creativity thrives with respect and recognition.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Steal My Art Back: Be seen, be heard, be protected.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Run
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Clone the repo
 
-## Learn More
+```
+git clone https://github.com/sp1d5r/DCMA-Takedown
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+make sure you have install node and npm. Then use npm start to run the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm start
+```
+
