@@ -4,16 +4,19 @@ import { Hero } from "../sections/hero/Hero";
 import gsap from "gsap";
 
 export interface LandingProps {
-
+    enableAnimation: boolean;
 }
 
 
-export const Landing: React.FC<LandingProps> = () => {
+export const Landing: React.FC<LandingProps> = ({enableAnimation}) => {
 
     const comp = useRef(null);
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
+            if (!enableAnimation) return;
+
+
             let timeline = gsap.timeline();
             timeline.from("#intro-slider", {
                 xPercent: "-100",
@@ -42,7 +45,7 @@ export const Landing: React.FC<LandingProps> = () => {
 
 
     return <div className="relative" ref={comp}>
-        <div id="intro-slider" className="h-screen w-full bg-primary absolute top-0 left-0 z-50 text-[80px] text-black flex justify-center items-center gap-10 flex-wrap">
+        {enableAnimation && <div id="intro-slider" className="h-screen w-full bg-primary absolute top-0 left-0 z-50 text-[80px] text-black flex justify-center items-center gap-10 flex-wrap">
             <span id="intro-1">
                 Steal 
             </span>
@@ -55,7 +58,7 @@ export const Landing: React.FC<LandingProps> = () => {
             <span id="intro-4">
                 Back!
             </span>
-        </div>
+        </div>}
         <NavigationBar />
         <Hero
             metric={395}
