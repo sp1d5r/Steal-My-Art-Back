@@ -7,10 +7,15 @@ import { PrimaryButton } from "../../components/buttons/PrimaryButton";
 
 
 export interface HeroProps { 
-
+    metric: number; //395
+    metricInfo: string; // Professional artists have prevented their work from being used  in the training of models  like Dalle-2.
+    heroText: string; // Book a Free Consultation!
+    heroSubText: string; // Are you an artist tired of your work being used without your consent? Worrying about AI models copying your style or plagiarizing your creations? Fear no more! Steal My Art Back is here to empower you.
+    ctaText: string; // Register
+    ctaSubText: string; // Instant Access. No Credit Card Needed.
 }
 
-export const Hero : React.FC<HeroProps> = () => {
+export const Hero : React.FC<HeroProps> = ({metric, metricInfo, heroText, heroSubText, ctaText, ctaSubText}) => {
     return <div className="relative w-full h-[90vh] flex justify-center items-center">
 
         {/* Left Screen*/}
@@ -21,10 +26,10 @@ export const Hero : React.FC<HeroProps> = () => {
             <div className="flex flex-col gap-3 px-4 py-5 max-w-[800px]" >
                 <div className="flex gap-2 items-center">
                     <img className="" src={Lightning} alt=""/>
-                    <p className="text-white text-[80px] font-bold"> 395</p>
+                    <p className="text-white text-[80px] font-bold"> {metric.toString()}</p>
                 </div>
                 <p className="text-white text-[25px]">
-                    Professional artists have prevented their work from being used  in the training of models  like Dalle-2.
+                    {metricInfo}
                 </p>
             </div>
         </div>
@@ -40,20 +45,21 @@ export const Hero : React.FC<HeroProps> = () => {
 
              {/* LHS Content */}
              <div className="max-w-[800px] flex flex-col items-between justify-center gap-10 z-10">
-                <h1 className="text-[80px] font-bold">Book a Free Consultation!</h1>
-                <p className="text-[25px]">Are you an artist tired of your work being used without your consent? Worrying about AI
-                 models copying your style or plagiarizing your creations? Fear no more! Steal My Art Back is here to empower you.</p>
+                <h1 className="text-[80px] font-bold">{heroText}</h1>
+                <p className="text-[25px]">
+                    {heroSubText}
+                 </p>
 
                  <div className=" w-full min-h-[50px] rounded-full bg-white">
                     <label className="flex justify-between p-2 pl-5">
                         <input className="flex-1 text-[18px]" name="email" placeholder="Your email address"/> 
                         <PrimaryButton onClick={() => {}} className="bg-secondary" children={
-                            <p className="text-white text-[25px] text-bold"> Register</p>
+                            <p className="text-white text-[25px] text-bold"> {ctaText}</p>
                         }/>
                     </label>
                  </div>
 
-                 <p className="text-[25px]"> Instant Access. No Credit Card Needed.</p>
+                 <p className="text-[25px]">{ctaSubText}</p>
              </div>
 
         </div>
