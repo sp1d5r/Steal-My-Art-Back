@@ -7,6 +7,7 @@ import { PrimaryButton } from "../../components/buttons/PrimaryButton";
 
 
 export interface HeroProps { 
+    id:string;
     metric: number; //395
     metricInfo: string; // Professional artists have prevented their work from being used  in the training of models  like Dalle-2.
     heroText: string; // Book a Free Consultation!
@@ -15,8 +16,8 @@ export interface HeroProps {
     ctaSubText: string; // Instant Access. No Credit Card Needed.
 }
 
-export const Hero : React.FC<HeroProps> = ({metric, metricInfo, heroText, heroSubText, ctaText, ctaSubText}) => {
-    return <div className="relative w-full h-[90vh] flex justify-center items-center">
+export const Hero : React.FC<HeroProps> = ({id, metric, metricInfo, heroText, heroSubText, ctaText, ctaSubText}) => {
+    return <div className="relative w-full h-[90vh] flex justify-center items-center" id={id}>
 
         {/* Left Screen*/}
         <div className="hidden  flex-1 h-full relative md:flex p-5 justify-end items-end">
