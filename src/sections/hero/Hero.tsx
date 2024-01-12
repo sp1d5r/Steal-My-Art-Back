@@ -17,7 +17,7 @@ export interface HeroProps {
 }
 
 export const Hero : React.FC<HeroProps> = ({id, metric, metricInfo, heroText, heroSubText, ctaText, ctaSubText}) => {
-    return <div className="relative w-full h-[90vh] flex justify-center items-center" id={id}>
+    return <div className="relative w-full h-[100vh] flex justify-center items-center" id={id}>
 
         {/* Left Screen*/}
         <div className="hidden  flex-1 h-full relative md:flex p-5 justify-end items-end">
@@ -36,12 +36,12 @@ export const Hero : React.FC<HeroProps> = ({id, metric, metricInfo, heroText, he
         </div>
 
         {/* Circular Text */}
-        <div className="absolute top-10 left-[51%] -translate-x-[50%] h-40 w-40 z-10 ">
+        <div className="absolute top-[20%] left-[51%] -translate-x-[50%] h-40 w-40 z-10 ">
             <img className="hover:animate-spin-slow" src={CircluarText} alt={""} />
         </div>
 
         {/* Right Screen*/}
-        <div className="relative flex-1 h-full bg-primary flex justify-center items-center">
+        <div className="relative flex-1 h-full bg-primary flex justify-center items-center pt-10">
             <img className="absolute bottom-0 right-0 w-[80%] object-contain " src={VectorPath} alt=""/>
 
              {/* LHS Content */}
