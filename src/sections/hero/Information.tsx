@@ -51,7 +51,7 @@ export const Information: React.FC<InformationProps> = ({}) => {
             
 
             {/* Right Hand Side */}
-            <div className="relative flex-1 flex-col  min-h-full flex justify-center items-start p-5 pt-[100px] sm:pt-10 gap-5">
+            <div className="relative flex-1 flex-col  min-h-full flex justify-center items-start p-5 pt-[100px] sm:pt-10 gap-20">
                     <h1 className='text-[40px] font-bold '>We make things easy for you!</h1>
                     <p className='text-[18px]'>Whether you're a seasoned professional or a budding artist, Steal My Art Back is here to support you. Our user-friendly tools and customizable features cater to artists of all skill levels and across various mediums.</p>
                     <RegisterForm registerText='Register'/>
