@@ -56,7 +56,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
             <h1 className="text-[40px] font-bold">How does it work?</h1>
             <p className="text-[25px]">Offload your art takedown requests to us and we will handle it for you.</p>
 
-            <div className="flex w-full gap-5 items-center mt-20 flex-wrap">
+            <div className="flex w-full gap-5 items-center mt-20 flex-wrap justify-center">
                 {stepperVals.map((elem) => {
                     return <StepperCard key={elem.cardNumber} cardNumber={elem.cardNumber} cardHeading={elem.cardHeading} cardSubHeading={elem.cardSubHeading} />
                 })}
