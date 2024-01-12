@@ -3,6 +3,7 @@ import { NavigationBar } from "../components/navbar/Navbar";
 import { Hero } from "../sections/hero/Hero";
 import gsap from "gsap";
 import { HowItWorks } from "../sections/hero/HowItWorks";
+import { Information } from "../sections/hero/Information";
 
 export interface LandingProps {
     enableAnimation: boolean;
@@ -71,5 +72,6 @@ export const Landing: React.FC<LandingProps> = ({enableAnimation}) => {
             id="hero"
         />
         <HowItWorks />
+        <Information />
     </div>;
 }
