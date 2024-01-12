@@ -2,6 +2,7 @@ import React, {useLayoutEffect, useRef} from "react";
 import { NavigationBar } from "../components/navbar/Navbar";
 import { Hero } from "../sections/hero/Hero";
 import gsap from "gsap";
+import { HowItWorks } from "../sections/hero/HowItWorks";
 
 export interface LandingProps {
     enableAnimation: boolean;
@@ -69,5 +70,6 @@ export const Landing: React.FC<LandingProps> = ({enableAnimation}) => {
             ctaSubText="Instant Access. No Credit Card Needed."
             id="hero"
         />
+        <HowItWorks />
     </div>;
 }
