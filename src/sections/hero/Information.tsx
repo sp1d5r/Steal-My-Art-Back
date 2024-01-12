@@ -1,21 +1,50 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import ManPainting from "../../assets/images/man-painting.png";
 import Dots from "../../assets/dots.svg";
 import { RegisterForm } from '../../components/register-form/RegisterForm';
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export interface InformationProps {
 
 }
 
+gsap.registerPlugin(ScrollTrigger); 
 export const Information: React.FC<InformationProps> = ({}) => {
-    return <section  className="w-full bg-white h-[80vh] ">
+
+    const info = useRef(null);
+
+    useEffect(()=>{
+        const infoPage = info.current;
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: infoPage,
+                start: "top 30%",
+                end: "+=400",
+                scrub: 0.5,
+                toggleActions: "restart pause reverse pause"
+            }
+        })
+        .fromTo("#info-bg-dots",
+            {y: 0},
+            {y: -200}
+        )
+        .fromTo("#info-fg-text",
+            {y:0},
+            {y: 200},
+            "<"
+        )
+    }, [])
+
+
+    return <section className="w-full bg-white h-[80vh] ">
         <div className="container flex  justify-center items-center py-20 sm:py-40 h-full">
 
             {/* Left Hand Side */}
             <div className="hidden flex-1 relative relative md:flex p-5 justify-end items-end min-w-[300px]">
-                <img  className='absolute top-[100px] -translate-x-[25%]' src={Dots} alt="Dots" />
-                <img  className='absolute top-0 left-0 translate-x-[25%] -translate-y-[50%]' src={ManPainting} alt="Main painting on canvas"/>
-                <div className='absolute -top-[100px] left-0 bg-primary p-5 w-[300px] border border-secondary'>
+                <img id="info-bg-dots" className='absolute top-[100px] -translate-x-[25%]' src={Dots} alt="Dots" />
+                <img ref={info} className='absolute top-0 left-0 translate-x-[25%] -translate-y-[50%]' src={ManPainting} alt="Main painting on canvas"/>
+                <div id="info-fg-text" className='absolute -top-[100px] left-0 bg-primary p-5 w-[300px] border border-secondary'>
                     <p className='italics text-[18px]'>“You’ve made this so simple! All I had to was enter some details and my art was removed from DALLE-2”</p>
                 </div>
             </div>
