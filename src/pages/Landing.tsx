@@ -4,6 +4,7 @@ import { Hero } from "../sections/hero/Hero";
 import gsap from "gsap";
 import { HowItWorks } from "../sections/hero/HowItWorks";
 import { Information } from "../sections/hero/Information";
+import { FAQs } from "../sections/hero/FAQs";
 
 export interface LandingProps {
     enableAnimation: boolean;
@@ -71,6 +72,7 @@ export const Landing: React.FC<LandingProps> = ({enableAnimation}) => {
             ctaSubText="Instant Access. No Credit Card Needed."
             id="hero"
         />
+        <FAQs />
         <HowItWorks />
         <Information />
     </div>;
