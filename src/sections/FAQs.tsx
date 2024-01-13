@@ -40,7 +40,7 @@ export const FAQs: React.FC = () => {
     ]
 
     return <section className="w-full ">
-            <div className="container flex flex-col justify-center items-center py-20 sm:py-40">
+            <div className="container flex flex-col justify-center items-center py-20 sm:py-40 !px-10">
                 <h1 className="text-[40px] font-bold">Frequently Asked Questions</h1>
                 <p>Here are some of the frequently asked questions we receive at Steal My Art Back.</p>
                 <div className="flex flex-col items-center gap-5 mt-5 flex-wrap justify-center w-full">

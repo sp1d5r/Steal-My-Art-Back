@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { HowItWorks } from "../sections/HowItWorks";
 import { Information } from "../sections/Information";
 import { FAQs } from "../sections/FAQs";
+import {CTA} from "../sections/CTA";
 
 export interface LandingProps {
     enableAnimation: boolean;
@@ -75,5 +76,6 @@ export const Landing: React.FC<LandingProps> = ({enableAnimation}) => {
         <FAQs />
         <HowItWorks />
         <Information />
+        <CTA />
     </div>;
 }

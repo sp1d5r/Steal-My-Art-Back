@@ -46,7 +46,7 @@ export const Hero : React.FC<HeroProps> = ({id, metric, metricInfo, heroText, he
             <img className="opacity-30 absolute bottom-0 right-0 w-[80%] object-contain " src={VectorPath} alt=""/>
 
              {/* LHS Content */}
-             <div className=" sm:max-w-[800px] max-w-full  flex flex-col items-between justify-center gap-10 z-10 p-10">
+             <div className=" sm:max-w-[800px] max-w-full  flex flex-col items-between justify-center gap-10 z-10 p-5">
                 <h1 className="text-[2rem] sm:text-[4rem] font-bold">{heroText}</h1>
                 <p className="text-[1rem]">
                     {heroSubText}
