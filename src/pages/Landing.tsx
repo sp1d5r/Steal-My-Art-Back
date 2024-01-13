@@ -6,6 +6,7 @@ import { HowItWorks } from "../sections/HowItWorks";
 import { Information } from "../sections/Information";
 import { FAQs } from "../sections/FAQs";
 import {CTA} from "../sections/CTA";
+import {Footer} from "../components/footer/Footer";
 
 export interface LandingProps {
     enableAnimation: boolean;
@@ -77,5 +78,6 @@ export const Landing: React.FC<LandingProps> = ({enableAnimation}) => {
         <HowItWorks />
         <Information />
         <CTA />
+        <Footer />
     </div>;
 }
