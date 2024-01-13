@@ -1,10 +1,10 @@
 import React, {useLayoutEffect, useRef} from "react";
 import { NavigationBar } from "../components/navbar/Navbar";
-import { Hero } from "../sections/hero/Hero";
+import { Hero } from "../sections/Hero";
 import gsap from "gsap";
-import { HowItWorks } from "../sections/hero/HowItWorks";
-import { Information } from "../sections/hero/Information";
-import { FAQs } from "../sections/hero/FAQs";
+import { HowItWorks } from "../sections/HowItWorks";
+import { Information } from "../sections/Information";
+import { FAQs } from "../sections/FAQs";
 
 export interface LandingProps {
     enableAnimation: boolean;

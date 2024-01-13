@@ -40,9 +40,9 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ className = '' }) 
     }, [])
 
 
-    return <div ref={comp} className="w-[95%] flex fixed top-0 sm:bg-grey-50 min-h-12 justify-between items-center gap-[90px] inline-flex px-10 py-5 navigation-bar m-[2.5%] z-40">
+    return <div ref={comp} className="w-[95%] flex fixed top-0 sm:bg-grey-50 min-h-12 justify-between items-center gap-[90px] inline-flex px-5 py-2 navigation-bar m-[1%] z-40">
         {
-            menuExpanded && <div className={"absolute z-50 h-[101vh] w-[101vw] -top-[15px] -left-[15px] bg-dark flex flex-col px-10 py-5 justify-between"}>
+            menuExpanded && <div className={"absolute z-50 h-[101vh] w-[101vw] -top-[15px] -left-[15px] bg-dark flex flex-col px-5 py-2 justify-between"}>
                 <div className="flex justify-start min-h-[70px]">
                     <Logo />
                 </div>
@@ -57,7 +57,7 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ className = '' }) 
                     <div className="border-t border-white h-[10px] w-[80vw]" />
                     
                     <PrimaryButton onClick={() => {}} className="bg-secondary" children={
-                                <p className="text-white text-[25px] text-bold"> {"Register"}</p>
+                                <p className="text-white text-[1rem] text-bold"> {"Register"}</p>
                             }/>
                     <div className={"w-full flex justify-center items-center border border-red-500 rounded-xl p-5 bg-red-400"} onClick={() => {setMenuExpanded(false)}}>
                         <p className={"text-white font-bold"}>
@@ -74,7 +74,7 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ className = '' }) 
             <Logo />
         </div>
 
-        <div className={"hidden md:flex gap-20 justify-center items-center font-bold text-[18px]"}>
+        <div className={"hidden lg:flex gap-20 justify-center items-center font-bold text-[1rem]"}>
             <p className='hover:underline'>Features</p>
             <p className='hover:underline'>Solutions</p>
             <p className='hover:underline'>Pricing</p>
@@ -82,11 +82,11 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ className = '' }) 
 
 
             <PrimaryButton onClick={() => {}} className="bg-secondary" children={
-                                <p className="text-white text-[25px] text-bold"> {"Register"}</p>
+                                <p className="text-white text-[1rem] text-bold"> {"Register"}</p>
                             }/>
         </div>
 
-        <div className={"flex md:hidden gap-5 justify-center items-center "} onClick={() => { console.log('here'); setMenuExpanded(true)}}>
+        <div className={"flex lg:hidden gap-5 justify-center items-center "} onClick={() => { console.log('here'); setMenuExpanded(true)}}>
             <div className="border-l border-white w-[40px]" />
             <img src={Cards} alt={"menu"} className={"h-[50px] w-[50px]"} />
         </div>

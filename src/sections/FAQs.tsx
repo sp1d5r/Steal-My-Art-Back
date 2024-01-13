@@ -13,18 +13,18 @@ export const FAQCard :React.FC<FAQCardProp> = ({question, answer}) => {
     }
     
     return (
-        <div className="flex flex-col items-center border p-2 w-[80%]">
-        <div className="w-full flex justify-between items-center">
-            <p className="text-xl font-semibold">{question}</p>
-            <button onClick={toggleOpen} className="text-xl font-bold ">
-            {isOpen ? '▲' : '▼'}
-            </button>
-        </div>
-        {isOpen && (
-            <div className="mt-4 text-center">
-            <p className="text-lg">{answer}</p>
+        <div onClick={()=>{toggleOpen()}} className="flex flex-col items-center p-5 w-full border border-stone-500 rounded transition-all">
+            <div className="w-full flex justify-between items-center">
+                <p className="text-[1rem] font-semibold">{question}</p>
+                <button onClick={() => {}} className="text-[1rem] font-bold ">
+                {isOpen ? '▲' : '▼'}
+                </button>
             </div>
-        )}
+            {isOpen && (
+                <div className="mt-4 text-center ">
+                <p className="text-[0.8rem]">{answer}</p>
+                </div>
+            )}
         </div>
     )
 }
@@ -42,11 +42,10 @@ export const FAQs: React.FC = () => {
     return <section className="w-full ">
             <div className="container flex flex-col justify-center items-center py-20 sm:py-40">
                 <h1 className="text-[40px] font-bold">Frequently Asked Questions</h1>
-                <div className="flex flex-col items-center gap-8 w-full gap-5 items-center mt-20 flex-wrap justify-center">
+                <p>Here are some of the frequently asked questions we receive at Steal My Art Back.</p>
+                <div className="flex flex-col items-center gap-5 mt-5 flex-wrap justify-center w-full">
                  {faqVals.map((elem) => {
-                    return <div className="px-5 py-[30px] w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2 bg-white rounded-[10px] shadow-lg shadow-green-200/50 border border-stone-500 justify-center items-center gap-[92px] inline-flex">
-                        <FAQCard question={elem.question} answer={elem.answer} />
-                    </div>
+                    return <FAQCard question={elem.question} answer={elem.answer} />
                 })}
             </div>
             </div> 

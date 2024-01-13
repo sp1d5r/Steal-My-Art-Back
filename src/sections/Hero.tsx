@@ -1,9 +1,10 @@
 import React from "react";
-import CircluarText from "../../assets/circle-text.svg";
-import Lightning from "../../assets/icons/Lightning.svg";
-import GirlImage from "../../assets/images/girl-stock.png";
-import VectorPath from "../../assets/images/vector-paths.svg";
-import { PrimaryButton } from "../../components/buttons/PrimaryButton";
+import CircluarText from "../assets/circle-text.svg";
+import Lightning from "../assets/icons/Lightning.svg";
+import GirlImage from "../assets/images/girl-stock.png";
+import VectorPath from "../assets/images/vector-paths.svg";
+import { PrimaryButton } from "../components/buttons/PrimaryButton";
+import {RegisterForm} from "../components/register-form/RegisterForm";
 
 
 export interface HeroProps { 
@@ -27,40 +28,33 @@ export const Hero : React.FC<HeroProps> = ({id, metric, metricInfo, heroText, he
             <div className="flex flex-col gap-3 px-4 py-5 sm:max-w-full max-w-[800px]" >
                 <div className="flex gap-2 items-center">
                     <img className="" src={Lightning} alt=""/>
-                    <p className="text-white text-[80px] font-bold"> {metric.toString()}</p>
+                    <p className="text-white text-[3rem] font-bold"> {metric.toString()}</p>
                 </div>
-                <p className="text-white text-[25px]">
+                <p className="text-white text-[1rem]">
                     {metricInfo}
                 </p>
             </div>
         </div>
 
         {/* Circular Text */}
-        <div className="opacity-30 sm:opacity-100 absolute top-[20%] left-[51%] -translate-x-[50%] h-40 w-40 z-10 ">
+        <div className="opacity-30 sm:opacity-50 absolute top-[20%] left-[51%] -translate-x-[100%] h-40 w-40 z-10 ">
             <img className="hover:animate-spin-slow" src={CircluarText} alt={""} />
         </div>
 
         {/* Right Screen*/}
-        <div className="relative flex-1 w-full min-h-full bg-primary flex justify-center items-center p-5 pt-[100px] sm:pt-10">
-            <img className="absolute bottom-0 right-0 w-[80%] object-contain " src={VectorPath} alt=""/>
+        <div className="relative flex-1 w-full min-h-full bg-primary flex justify-center items-center p-5 pt-[100px] sm:pt-20">
+            <img className="opacity-30 absolute bottom-0 right-0 w-[80%] object-contain " src={VectorPath} alt=""/>
 
              {/* LHS Content */}
-             <div className=" sm:max-w-[800px] max-w-full  flex flex-col items-between justify-center gap-10 z-10">
-                <h1 className="text-[40px] sm:text-[80px] font-bold">{heroText}</h1>
-                <p className="text-[25px]">
+             <div className=" sm:max-w-[800px] max-w-full  flex flex-col items-between justify-center gap-10 z-10 p-10">
+                <h1 className="text-[2rem] sm:text-[4rem] font-bold">{heroText}</h1>
+                <p className="text-[1rem]">
                     {heroSubText}
                  </p>
 
-                 <div className=" w-[90%] min-h-[50px] rounded-full bg-white">
-                    <label className="flex justify-between p-2 pl-5">
-                        <input className="flex-1 text-[18px]" name="email" placeholder="Your email address"/> 
-                        <PrimaryButton onClick={() => {}} className="bg-secondary flex-auto px-2 py-2" children={
-                            <p className="text-white text-[25px] text-bold"> {ctaText}</p>
-                        }/>
-                    </label>
-                 </div>
+                 <RegisterForm  registerText={"Register"}/>
 
-                 <p className="text-[25px]">{ctaSubText}</p>
+                 <p className="text-[1rem]">{ctaSubText}</p>
              </div>
 
         </div>
