@@ -4,7 +4,7 @@ import Lightning from "../assets/icons/Lightning.svg";
 import GirlImage from "../assets/images/girl-stock.png";
 import VectorPath from "../assets/images/vector-paths.svg";
 import { PrimaryButton } from "../components/buttons/PrimaryButton";
-import {RegisterForm} from "../components/register-form/RegisterForm";
+import {RegisterFormContainer} from "../components/register-form/RegisterForm";
 
 
 export interface HeroProps { 
@@ -52,7 +52,7 @@ export const Hero : React.FC<HeroProps> = ({id, metric, metricInfo, heroText, he
                     {heroSubText}
                  </p>
 
-                 <RegisterForm  registerText={"Register"}/>
+                 <RegisterFormContainer registerText={"Register"}/>
 
                  <p className="text-[1rem]">{ctaSubText}</p>
              </div>
