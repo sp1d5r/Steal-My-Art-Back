@@ -40,23 +40,44 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ className = '' }) 
     }, [])
 
 
-    return <div ref={comp} className="w-[95%] flex fixed top-0 sm:bg-grey-50 min-h-12 justify-between items-center gap-[90px] inline-flex px-5 py-2 navigation-bar m-[1%] z-40">
+    return <div ref={comp} className="w-[98%] flex fixed top-0 sm:bg-grey-50 min-h-12 justify-between items-center gap-[90px] inline-flex px-5 py-2 navigation-bar m-[1%] z-40">
         {
-            menuExpanded && <div className={"absolute z-50 h-[101vh] w-[101vw] -top-[15px] -left-[15px] bg-dark flex flex-col px-5 py-2 justify-between"}>
+            menuExpanded && <div className={"duration-75 absolute z-50 h-[100vh] w-[100vw] -top-[5px] -left-[1%] bg-primary flex flex-col px-5 py-10 justify-between"}>
                 <div className="flex justify-start min-h-[70px]">
                     <Logo />
                 </div>
 
-                <div className="border-t border-white w-[80vw]" />
+                <div className="border-t border-black w-[90vw]" />
 
-                <div className="gap-5 flex flex-col justify-start py-5">
-                    <p className="text-white"> Navigation options</p>
+                <div className="gap-10 flex flex-col justify-start py-10 px-2">
+                    <p className="text-black text-bold text-[1.2rem]"> Navigation options</p>
+                    <p className='hover:underline font-bold underline text-[1.2rem]'
+                       onClick={()=>{
+                           const faq = document.getElementById("FAQ");
+                           if (faq) {
+                               faq.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                           }
+                       }}
+                    >FAQ</p>
+                    <p className='hover:underline font-bold underline text-[1.2rem]' onClick={()=>{
+                        const howItWorks = document.getElementById("HowItWorks");
+                        if (howItWorks) {
+                            howItWorks.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                        }
+                    }}>Solution</p>
+                    <p className='hover:underline font-bold underline text-[1.2rem]' onClick={()=>{
+                        const informatino = document.getElementById("Information");
+                        if (informatino) {
+                            informatino.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                        }
+                    }}>Explore</p>
+
                 </div>
 
                 <div className={"flex flex-1 gap-5 justify-end items-center flex-col "}>
-                    <div className="border-t border-white h-[10px] w-[80vw]" />
+                    <div className="border-t border-black h-[10px] w-[90vw]" />
                     
-                    <PrimaryButton onClick={() => {}} className="bg-secondary" children={
+                    <PrimaryButton onClick={() => {window.location.href="https://calendly.com/steal-my-art-back/30min"}} className="bg-secondary px-20 py-5 rounded" children={
                                 <p className="text-white text-[1rem] text-bold"> {"Register"}</p>
                             }/>
                     <div className={"w-full flex justify-center items-center border border-red-500 rounded-xl p-5 bg-red-400"} onClick={() => {setMenuExpanded(false)}}>
