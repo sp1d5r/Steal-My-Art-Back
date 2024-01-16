@@ -37,7 +37,7 @@ export const Information: React.FC<InformationProps> = ({}) => {
     }, [])
 
 
-    return <section className="w-full bg-white h-[90vh] ">
+    return <section id={"Information"} className="w-full bg-white h-[90vh] ">
         <div className="container flex  justify-center items-center py-20 sm:py-40 h-full">
 
             {/* Left Hand Side */}

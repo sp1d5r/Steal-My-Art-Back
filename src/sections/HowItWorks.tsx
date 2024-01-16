@@ -51,7 +51,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
         {cardNumber: 3, cardHeading: "View Progress ", cardSubHeading: "Go on the platform and see how your takedown requests are going."},
     ]
 
-    return <section ref={comp} className="w-full bg-primary py-10">
+    return <section id={"HowItWorks"} ref={comp} className="w-full bg-primary py-10">
         <div className="container flex flex-col justify-center items-center py-10 sm:py-20 !px-10">
             <h1 className="text-[3rem] font-bold">How does it work?</h1>
             <p className="text-[1rem]">Offload your art takedown requests to us and we will handle it for you.</p>

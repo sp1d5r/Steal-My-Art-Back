@@ -39,7 +39,7 @@ export const FAQs: React.FC = () => {
         {question: "Will art be replaced by AI?", answer: "Some forms of art will become far less profitable for artists as AI replicates them with ease!"},
     ]
 
-    return <section className="w-full ">
+    return <section id={"FAQ"} className="w-full ">
             <div className="container flex flex-col justify-center items-center py-20 sm:py-40 !px-10">
                 <h1 className="text-[40px] font-bold">Frequently Asked Questions</h1>
                 <p>Here are some of the frequently asked questions we receive at Steal My Art Back.</p>
