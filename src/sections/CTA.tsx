@@ -11,11 +11,11 @@ export const CTA :React.FC<CTAProps> = ({}) => {
             <p className='text-[1rem]'>Provide your email address and start taking down your art. </p>
 
             <div className={"flex gap-10 flex-col sm:flex-row"}>
-                <button className={"bg-secondary px-10 py-5 rounded-xl hover:scale-105"}>
+                <button onClick={() => {window.location.href = "https://calendly.com/steal-my-art-back/30min"}} className={"bg-secondary px-10 py-5 rounded-xl hover:scale-105"}>
                     <p className={"font-bold text-white"}>Free Consultation</p>
                 </button>
 
-                <button className={"border border-dark px-10 py-5 rounded-xl hover:scale-105"} >
+                <button onClick={() => {window.location.href = "https://calendly.com/steal-my-art-back/30min"}} className={"border border-dark px-10 py-5 rounded-xl hover:scale-105"} >
                     <p className={"font-bold text-dark"}>Contact Sales</p>
                 </button>
 

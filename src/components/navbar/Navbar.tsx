@@ -81,7 +81,7 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ className = '' }) 
 
 
 
-            <PrimaryButton onClick={() => {}} className="bg-secondary" children={
+            <PrimaryButton onClick={() => {window.location.href = "https://calendly.com/steal-my-art-back/30min"}} className="bg-secondary" children={
                                 <p className="text-white text-[1rem] text-bold"> {"Register"}</p>
                             }/>
         </div>
