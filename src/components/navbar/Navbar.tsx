@@ -75,9 +75,26 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ className = '' }) 
         </div>
 
         <div className={"hidden lg:flex gap-20 justify-center items-center font-bold text-[1rem]"}>
-            <p className='hover:underline'>Features</p>
-            <p className='hover:underline'>Solutions</p>
-            <p className='hover:underline'>Pricing</p>
+            <p className='hover:underline'
+               onClick={()=>{
+                    const faq = document.getElementById("FAQ");
+                    if (faq) {
+                        faq.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                    }
+                }}
+            >FAQ</p>
+            <p className='hover:underline' onClick={()=>{
+                const howItWorks = document.getElementById("HowItWorks");
+                if (howItWorks) {
+                    howItWorks.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                }
+            }}>Solution</p>
+            <p className='hover:underline' onClick={()=>{
+                const informatino = document.getElementById("Information");
+                if (informatino) {
+                    informatino.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                }
+            }}>Explore</p>
 
 
 
