@@ -50,7 +50,7 @@ export const Landing: React.FC<LandingProps> = ({enableAnimation}) => {
 
 
     return <div className="relative" ref={comp}>
-        {enableAnimation && <div id="intro-slider" className="h-screen w-full bg-primary absolute top-0 left-0 z-50 text-[80px] text-black flex justify-center items-center gap-10 flex-wrap">
+        {enableAnimation && <div id="intro-slider" className="h-screen w-full bg-primary absolute top-0 left-0 z-50 text-[80px] text-black flex justify-center items-center gap-10 flex-wrap content-center">
             <span id="intro-1">
                 Steal 
             </span>

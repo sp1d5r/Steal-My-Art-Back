@@ -11,7 +11,7 @@ export const SimpleRegisterForm :React.FC<RegisterFormProps> & {identifier: stri
     return <div className=" w-[90%] min-h-[50px] rounded-full bg-white border border-grey-200">
     <label className="flex justify-between p-2 pl-5">
         <input className="flex-1 text-[18px]" name="email" placeholder="Your email address"/> 
-        <PrimaryButton onClick={() => {}} className="bg-secondary  px-2 py-2" children={
+        <PrimaryButton onClick={() => {window.location.href= "https://calendly.com/steal-my-art-back/30min"}} className="bg-secondary  px-2 py-2" children={
             <p className="text-white text-[1rem] text-bold"> {registerText}</p>
         }/>
     </label>
