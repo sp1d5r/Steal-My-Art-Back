@@ -46,7 +46,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
 
 
     const stepperVals: StepperCardProp[] = [
-        {cardNumber: 1, cardHeading: "Create a Free Account", cardSubHeading: "Navigate to the sign in page and create an account."},
+        {cardNumber: 1, cardHeading: "Book a free consultation", cardSubHeading: "Go to the top of this page and book a consultation."},
         {cardNumber: 2, cardHeading: "Request Art Takedown", cardSubHeading: "Our team will handle the art takedown on your behalf."},
         {cardNumber: 3, cardHeading: "View Progress ", cardSubHeading: "Go on the platform and see how your takedown requests are going."},
     ]
